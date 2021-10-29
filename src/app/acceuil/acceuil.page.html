@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Acceuil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-header>
+    <ion-button routerLink="/search">Search</ion-button>
+    <ion-button routerLink="/profile">Profile</ion-button>
+  </ion-header>
+  <ion-item *ngFor="let user of userListe">
+    <ion-label>{{ user.nom+ '' + user.prenom}}</ion-label>
+  </ion-item>
+  
+</ion-content>

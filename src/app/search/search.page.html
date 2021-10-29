@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>search</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar [(ngModel)]="liste"></ion-searchbar>
+  <ion-item *ngFor="let user of userListe |filter:liste">
+    <ion-label>{{user.nom}}</ion-label>
+    <ion-label>{{user.prenom}}</ion-label>
+  </ion-item>
+</ion-content>

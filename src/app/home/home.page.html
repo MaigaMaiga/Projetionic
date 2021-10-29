@@ -1,0 +1,26 @@
+
+<ion-content [fullscreen]="true">
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title size="medium"></ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div>
+    <form #f="ngForm" (ngSubmit)="connecterUser(f.value)">
+      <ion-header>
+        <img src="assets/images/logo.png" >
+      </ion-header>
+      <ion-item>
+        <ion-label>Email</ion-label>
+        <ion-input type="text" name="email" placeholder="Email ID" [(ngModel)]="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Password</ion-label>
+        <ion-input type="password" name="password" placeholder="Mot de pass..." [(ngModel)]="password"></ion-input>
+      </ion-item>
+       <ion-button expand="block" type="submit"  name="Login">Login</ion-button>
+       <ion-button expand="block" routerLink="/passoublie">Mot de pass oublié</ion-button>
+       <ion-button expand="block" routerLink="/register" type="submit">Register</ion-button>
+    </form>
+  </div>
+</ion-content>
